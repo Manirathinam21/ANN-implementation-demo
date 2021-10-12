@@ -5,18 +5,21 @@ ANN-implementation-demo
 ```bash
 mkdir -p src/utils
 touch config.yaml
+touch src/__init__.py
+touch src/utils/__init__.py
+touch src/utils/model.py src/utils/data_mgmt.py src/utils/common.py
 
 pip freeze
 pip list
 conda env create -f environment.yml
-pip install -e .
-touch src/utils/model.py src/utils/data_mgmt.py src/utils/common.py
+pip install -e .("w'll install packages available in setup.py")
+
 python src/training.py
 ```
 
 ## To use a yaml file
 ```bash
-pip install PyYAML (" need to use this cmd in python complie ")
+pip install PyYAML ("need to run this cmd in python complie for use yaml ")
 import yaml
 from src.utils.common import read_config
 read_config("config.yaml")
