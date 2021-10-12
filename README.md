@@ -2,7 +2,25 @@
 ANN-implementation-demo
 
 ## important commands------------
-conda activate ./envs
+```bash
+mkdir -p src/utils
+touch config.yaml
+
+pip freeze
+pip list
+conda env create -f environment.yml
+pip install -e .
+touch src/utils/model.py src/utils/data_mgmt.py src/utils/common.py
+python src/training.py
+```
+
+## To use a yaml file
+```bash
+pip install PyYAML (" need to use this cmd in python complie ")
+import yaml
+from src.utils.common import read_config
+read_config("config.yaml")
+```
 
 ## creating envs-----
 
