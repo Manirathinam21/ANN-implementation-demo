@@ -1,7 +1,7 @@
 import tensorflow as tf
 import time
 import os
-import matplotlib as plt
+import matplotlib.pyplot as plt
 import pandas as pd
 
 def create_model(LOSS_FUNCTION, OPTIMIZER, METRICS, NUM_CLASSES):

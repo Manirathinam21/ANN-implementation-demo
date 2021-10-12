@@ -38,10 +38,10 @@ def training(config_path):
     plots_dir = config["artifacts"]["plots_dir"]
     plot_dir_path=os.path.join(artifacts_dir, plots_dir)   
     os.makedirs(plot_dir_path, exist_ok=True)
-    
+
     plot_name = config["artifacts"]["plot_name"]
     df=history.history
-    save_plot(df,plot_name, plots_dir)
+    save_plot(df,plot_name, plot_dir_path)
 
 if __name__ == '__main__':
     args = argparse.ArgumentParser()
