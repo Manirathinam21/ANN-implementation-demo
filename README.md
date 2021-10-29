@@ -24,7 +24,10 @@ import yaml
 from src.utils.common import read_config
 read_config("config.yaml")
 ```
-
+## To use a TENSORBOARD File
+```bash
+tensorboard --logdir=logs_dir/tensorboard_logs/
+```
 ## creating envs-----
 
 ```bash
